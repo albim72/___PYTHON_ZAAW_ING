@@ -31,3 +31,15 @@ for i in wznowienie(3,4):
         continue
     print(f'wartość {gn(3)}')
     print(f'zwrócono wartość: {i}')
+
+#przypadek 3
+def genret():
+    for i in range(11):
+        if i==7:
+            print("przerwanie")
+            return 
+        else:
+            yield i
+
+for t in genret():
+    print(t)
