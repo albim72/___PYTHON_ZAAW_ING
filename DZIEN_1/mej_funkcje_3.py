@@ -1,4 +1,5 @@
 #przypadek 1
+import math
 
 def h(x):
     return x**3
@@ -23,3 +24,11 @@ print(bx(12,7,8))
 print(bx(12,7))
 print(bx(12))
 print(bx(5,6,f=7))
+
+#przypadek3
+
+def rank(*lang,nrrank,**kwargs):
+    print(f'ranking języków programowania:\n1: {lang[0]}\n2: {lang[1]}\n3: {lang[2]}.')
+
+rank("Python","Java","C++",nrrank=3)
+rank("Python","Java","JavaScript","C++","Perl",nrrank=3)
