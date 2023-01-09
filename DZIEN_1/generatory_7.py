@@ -27,5 +27,7 @@ def wznowienie(n,k):
 def gn(h):
     return h*2
 for i in wznowienie(3,4):
+    if i == 1001:
+        continue
     print(f'wartość {gn(3)}')
     print(f'zwrócono wartość: {i}')
