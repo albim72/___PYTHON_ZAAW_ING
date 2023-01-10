@@ -14,3 +14,16 @@ class Book(object):
     #zachowanie -> funkcje klasy(metody)
     def create_book(self):
         print("utworzono nową książkę...")
+        
+
+    def print_book(self):
+        print(f'ksiązka({self.idbook}) -> tytul: {self.tytul}, autor: {self.autor},'
+              f'oprawa: {self.oprawa}, cena: {self.cena} zł')
+
+    def rabat(self):
+        return 0.1*self.cena
+
+
+
+
+
