@@ -14,10 +14,13 @@ class Osoba:
 
     def print_osoba(self) -> None:
         print(f"Osoba -> imię: {self.imie}, wiek: {self.wiek}, waga: {self.waga} kg, "
-              f"wzrost: {self.wzrost} cm")
+              f"wzrost: {self.wzrost} cm, kolor_oczu: {self.kolor_oczu}")
 
     def wiek_za_n_lat(self, n: int) -> int:
         return self.wiek + n
 
     def czypracownik(self) -> bool:
         return self.pracownik
+    
+    def zmiana_koloru(self,nowykolor):
+        self.kolor_oczu = nowykolor
