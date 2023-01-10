@@ -21,6 +21,20 @@ class Osoba:
 
     def czypracownik(self) -> bool:
         return self.pracownik
-    
+
     def zmiana_koloru(self,nowykolor):
         self.kolor_oczu = nowykolor
+    
+    
+    def bmi(self):
+        return self.waga/(self.wzrost/100)**2
+    
+    def opis_bmi(self):
+        if self.bmi()<18.5:
+            return "niedowaga"
+        elif self.bmi()<=25:
+            return "waga prawidłowa"
+        elif self.bmi()<=30:
+            return "nadwaga"
+        else:
+            return "otyłość"
