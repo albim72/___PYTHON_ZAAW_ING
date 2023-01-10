@@ -1,5 +1,6 @@
 from oldresistor import OldResistor
 from resistor import Resistor
+from voltage import VoltageResistance
 
 print("______________________________________")
 print("Klasa OldResistor")
@@ -18,3 +19,12 @@ r1.ohms = 1.2E2
 
 print(f'układ elektryczny:\noporność: {r1.ohms} om\nnapięcie prądu: {r1.voltage} V'
       f'\nnatężenie prądu: {r1.current} A')
+
+print("______________________________________")
+print("Klasa VoltageResistance")
+
+r2 = VoltageResistance(5.4E3)
+print(f'natężenie początkowe prądu: {r2.current} A')
+r2.voltage = 1.3E2
+print(f'napięcie prądu: {r2.voltage} V')
+print(f'natężenie prądu: {r2.current} A')
