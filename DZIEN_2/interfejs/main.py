@@ -11,3 +11,5 @@ p.paliwo = 7.81
 print(p.paliwo)
 
 print(f'koszt przejazdu: {p.koszt_przejazdu(173,19,p.paliwo)} zł')
+
+print(p.info(2,"przejazd z dodatkową opłata za autostradę 38 zł"))
