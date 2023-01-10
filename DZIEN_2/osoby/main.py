@@ -33,3 +33,22 @@ st1.print_student()
 n_lat = 3
 print(f'wiek osoby za {n_lat} lat -> {st1.wiek_za_n_lat(n_lat)} lat')
 print(f'czy osoba jest pracownikiem -> {st1.czypracownik()}')
+
+print("____ Student 2 _____")
+st2 = Student("Olga",23,56,170,"GH674875","Ekonomia","Makroekonomia",6,"XYZ","sekretarka",1,2800)
+st2.print_osoba()
+st2.print_student()
+st2.print_pracownik()
+n_lat = 3
+print(f'wiek osoby za {n_lat} lat -> {st2.wiek_za_n_lat(n_lat)} lat')
+print(f'czy osoba jest pracownikiem -> {st2.czypracownik()}')
+
+print("____ Student 3 _____")
+st3 = Student("Robert",22,80,180,"II24345","Informatyka","Sieci komputerowe",5,dyscyplina="biegi ultra",lataupr=5,
+              best_wynik="102km 19h 32min 4s")
+st3.print_osoba()
+st3.print_student()
+print(st3.infosport())
+n_lat = 3
+print(f'wiek osoby za {n_lat} lat -> {st3.wiek_za_n_lat(n_lat)} lat')
+print(f'czy osoba jest pracownikiem -> {st3.czypracownik()}')
