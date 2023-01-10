@@ -1,6 +1,7 @@
 from IPojazd import IPojazd
+from iopis import IOpis
 
-class Pojazd(IPojazd):
+class Pojazd(IPojazd,IOpis):
 
     def silnik(self, rodzaj_poj, kategoria, marka, model, rodzaj_silnika, poj):
         return f"Pojazd -> {rodzaj_poj},{kategoria},marka: {marka},rodzaj silnika: {rodzaj_silnika}"
@@ -15,3 +16,6 @@ class Pojazd(IPojazd):
 
     def koszt_przejazdu(self, odl, litry, cena_l):
         return self.spal_100(odl,litry)*(odl/100)*cena_l
+
+    def info(self, id, wpis):
+        return f'wpis nr {id}: {wpis}'
