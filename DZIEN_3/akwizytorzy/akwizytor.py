@@ -10,11 +10,11 @@ class Akwizytor:
         self._nr_ubezpieczenia = nr_ubezpieczenia
         self.sprzedaz = sprzedaz
         self.prowizja = prowizja
-        
+
     @property
     def imie(self):
         return self._imie
-    
+
     @imie.setter
     def imie(self,imie):
         self._imie = imie
@@ -38,7 +38,7 @@ class Akwizytor:
     @property
     def sprzedaz(self):
         return self._sprzedaz
-    
+
     @sprzedaz.setter
     def sprzedaz(self,kwota):
         if kwota<Decimal('0.00'):
@@ -54,7 +54,14 @@ class Akwizytor:
         if not (Decimal('0.0') <= procent <= Decimal('20.00')):
             raise ValueError('prowizja nie może być ujemna ani większa niż 20%')
         self._prowizja = procent
-        
-        
-        
+
+    def zarobek(self):
+        return self.sprzedaz*(self.prowizja/Decimal('100.0'))
+    
+    def __repr__(self):
+        return (f'Akwizytor: {self.imie} {self.nazwisko}\n'
+                f'numer ubezpieczenia: {self.nr_ubezpieczenia}\n'
+                f'sprzdaż: {self.sprzedaz:.2f} zł\n'
+                f'prowizja: {self.prowizja:.2f} %\n')
+
         
