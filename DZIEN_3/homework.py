@@ -1,3 +1,6 @@
+
+
+
 class Homework:
     def __init__(self):
         self._grade = 0
@@ -51,3 +54,35 @@ st.math_grade = 54
 
 assert st.writing_grade == 67
 assert st.math_grade == 54
+
+class Grade:
+    def __init__(self):
+        self._value = 0
+
+    def __get__(self,instance,instance_type):
+        return self._value
+
+    def __set__(self, instance, value):
+        if not (0 <= value <= 100):
+            raise ValueError('ocena musi być wartością z zakresu 0 - 100')
+        self._value = value
+
+class Exam:
+    math_grade = Grade()
+    writing_grade = Grade()
+    science_grade = Grade()
+
+f_exam = Exam()
+
+f_exam.writing_grade = 82
+f_exam.math_grade = 99
+f_exam.science_grade = 76
+print(f'recenzja: {f_exam.writing_grade}')
+print(f'obliczenia: {f_exam.math_grade}')
+print(f'analiza naukowa: {f_exam.science_grade}')
+
+s_exam = Exam()
+
+s_exam.math_grade = 22
+print(f'pierwszy egzamin - obliczenia: {f_exam.math_grade}')
+print(f'drugi egzamin - obliczenia: {s_exam.math_grade}')
