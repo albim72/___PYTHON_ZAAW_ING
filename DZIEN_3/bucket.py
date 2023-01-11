@@ -12,3 +12,12 @@ class Bucket:
 
 bucket = Bucket(60)
 print(bucket)
+
+#krok2
+
+def fill(bucket,amount):
+    now = datetime.now()
+    if (now-bucket.reset_time)>bucket.period_delta:
+        bucket.quota = 0
+        bucket.reset_time = now
+    bucket.quota += amount
