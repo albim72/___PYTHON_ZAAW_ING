@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xs:schema xmlns="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="kraj">
         <xs:complexType>
             <xs:sequence>
@@ -7,7 +7,7 @@
                 <xs:element name = "obszar" type="xs:integer"/>
                 <xs:element name = "stolica" type="xs:string"/>
             </xs:sequence>
-            <xs:attribute nazwa="nazwa" type = "xs:string"/>
+            <xs:attribute name="nazwa" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
