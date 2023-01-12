@@ -15,3 +15,10 @@ xml_data = """
     </subjects>
 </student>
 """
+
+my_dict = xmltodict.parse(xml_data)
+print(my_dict)
+
+print(my_dict['student']['id'])
+print(my_dict['student']['name']['firstname'])
+print(my_dict['student']['subjects']['sub1'])
