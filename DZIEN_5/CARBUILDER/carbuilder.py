@@ -53,10 +53,10 @@ class Director:
         car = Car()
 
         body = self.__builder.getBody()
-        car.getBody(body)
+        car.setBody(body)
 
         engine = self.__builder.getEngine()
-        car.getEngine(engine)
+        car.setEngine(engine)
 
         i =0
         while i < 4:
