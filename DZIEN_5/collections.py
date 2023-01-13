@@ -1,4 +1,4 @@
-from collections import Counter,defaultdict, ChainMap
+from collections import Counter,defaultdict, ChainMap,UserString
 
 print("____ licznik _____")
 seq1 = ['B','B','A','B','C','A','B','B','A','C']
@@ -44,4 +44,31 @@ for h in c.keys():
 print("__________________")
 for h,k in c.items():
     print(f'{h}: {k}')
+
+print("__________UserString_________")
+
+class MojString(UserString):
+    def append(self,s):
+        self.data += s
+
+    def remove(self,s):
+        self.data = self.data.replace(s,"")
+
+s1 = MojString("Bieganie Ultra")
+print(f"tekst oryginalny: {s1.data}")
+
+s1.append(" w górach")
+print(f"tekst po dodaniu frazy: {s1.data}")
+
+s1.remove('Ultra ')
+print(f"tekst po usunięciu frazy: {s1.data}")
+
+s2 = MojString("hehehehehehehehe")
+print(f"tekst oryginalny: {s2.data}")
+
+s2.append(" - ale ubaw")
+print(f"tekst po dodaniu frazy: {s2.data}")
+
+s2.remove('h')
+print(f"tekst po usunięciu frazy: {s2.data}")
 
