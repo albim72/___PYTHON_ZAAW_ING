@@ -80,3 +80,12 @@ class Jeep(Builder):
         body = Body()
         body.shape = "SUV"
         return body
+
+def main():
+    jeepBuilder = Jeep()
+    director = Director()
+    print("samochód -> Jeep Cherokee")
+    director.setBuilder(jeepBuilder)
+    jeep = director.getCar()
+    jeep.specification()
+    print("\n")
